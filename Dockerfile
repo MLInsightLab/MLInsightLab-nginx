@@ -2,8 +2,7 @@
 FROM nginx:latest
 
 # Update
-RUN apt update
-RUN apt upgrade -y
+RUN apt update && apt upgrade -y && apt autoremove -y
 RUN apt install apache2-utils -y
 
 # Copy the custom nginx configuration file into the container
