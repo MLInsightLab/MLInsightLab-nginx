@@ -1,9 +1,8 @@
 # Use the official nginx image as base
-FROM nginx:latest
+FROM nginx:alpine-slim
 
 # Update
-RUN apt update && apt upgrade -y && apt autoremove -y
-RUN apt install apache2-utils -y
+RUN apk add bash
 
 # Copy the custom nginx configuration file into the container
 COPY nginx.nonssl.conf /etc/nginx/nginx.nonssl.conf
