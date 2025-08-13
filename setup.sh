@@ -12,8 +12,4 @@ else
 fi
 
 # Sleep for 30 seconds to allow all other services to start up
-sleep 30
-
-# Start nginx
-echo "Starting Nginx"
-nginx -g 'daemon off;'
+sleep 30 && echo "Starting Nginx" && nginx -g 'daemon off;'
