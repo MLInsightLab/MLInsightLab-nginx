@@ -11,5 +11,5 @@ else
     cp /etc/nginx/nginx.nonssl.conf /etc/nginx/nginx.conf
 fi
 
-# Sleep for 30 seconds to allow all other services to start up
-sleep 30 && echo "Starting Nginx" && nginx -g 'daemon off;'
+# Start the service
+echo "Starting Nginx" && nginx -g 'daemon off;'
