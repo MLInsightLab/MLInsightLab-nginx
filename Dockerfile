@@ -12,3 +12,4 @@ COPY nginx.ssl.conf /etc/nginx/nginx.ssl.conf
 COPY setup.sh /code/setup.sh
 
 EXPOSE 80 443
+
