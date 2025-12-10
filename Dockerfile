@@ -2,7 +2,7 @@
 FROM nginx:alpine-slim
 
 # Update
-RUN apk add bash
+RUN apk update && apk add bash
 
 # Copy the custom nginx configuration file into the container
 COPY nginx.nonssl.conf /etc/nginx/nginx.nonssl.conf
