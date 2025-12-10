@@ -1,8 +1,5 @@
 # Use the official nginx image as base
-FROM nginx:alpine-slim
-
-# Update
-RUN apk update && apk add bash
+FROM nginx:latest
 
 # Copy the custom nginx configuration file into the container
 COPY nginx.nonssl.conf /etc/nginx/nginx.nonssl.conf
